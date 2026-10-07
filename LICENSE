@@ -1,0 +1,71 @@
+LUNA AiBridge Host — Freeware License
+
+Copyright (c) 2026 Nishioka Sadahiko. All rights reserved.
+
+This license applies to AiBridge Host (AiBridgeHost.exe) and AiBridge Host
+Connect (AiBridgeHostConnect.exe), version 0.9.0 and later, together with the
+apps bundled in them. The source code is not published and is not licensed to
+you.
+
+AiBridge Host runs on a PC: it serves web apps, connects to a telescope mount
+(LX200 serial/TCP, ASCOM Alpaca, INDI, N.I.N.A., or a built-in simulated
+mount) and exposes an AiBridge-compatible device API. The AiBridge ESP32
+firmware is a separate project under the MIT License
+(https://github.com/OnStepNinja/AiBridge). Optionally, AiBridge Host Connect
+lets an AI assistant (such as claude.ai or Grok) create and test apps and,
+with your approval, operate connected equipment.
+
+PERMITTED, free of charge, no registration or payment required:
+- Downloading this software and running it, in unmodified form, for your own
+  personal or organizational astronomy use.
+- Placing your own web apps in the apps folder and using them with this
+  software, including apps written with the help of an AI assistant. You own
+  the apps you write.
+
+NOT PERMITTED without the author's prior written permission:
+- Redistributing, rehosting, mirroring, or bundling this software (in
+  original or modified form) anywhere other than the author's own official
+  release page.
+- Selling this software, or any modified, rebranded, or repackaged version
+  of it.
+- Reverse-engineering, decompiling, or disassembling this software in order
+  to build a competing or redistributed product from it.
+- Removing or altering this notice, the PROTOTYPE warning, or the author
+  attribution shown by the software or its screens.
+
+⚠ PROTOTYPE SOFTWARE: this is an early prototype (v0.9.0), still under
+development and released to gather feedback. It may not work correctly and
+may behave unexpectedly, including with connected hardware (telescope mount).
+- It opens a local web server. By default it accepts connections from this PC
+  only. Web pages from other sites are refused, and an optional PIN can
+  protect access from other devices. However, apps that you open from the
+  server run outside its approval system: such an app can send commands to the
+  connected mount (slew, park, stop, change settings), can use the server's
+  administration functions, and may be able to send data to the internet.
+  Use only apps you trust or have read. Enable LAN access only on a network
+  you trust.
+- AI features are experimental. An AI assistant can write apps and, after you
+  accept a warning, can send commands to connected equipment; GOTO, sync and
+  settings changes require your approval each time. AI-written apps and
+  AI-sent commands can be wrong. Test first on the simulated mount; on real
+  equipment, test carefully, one small movement at a time.
+- Using the AI features involves your AI provider's service and a temporary
+  public tunnel (Cloudflare Quick Tunnel). You are responsible for the
+  accounts, plans and networks you use them with.
+- Stay with the equipment, keep STOP within reach, and be ready to cut power.
+  Unattended operation is not supported.
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE
+USE OF THIS SOFTWARE, INCLUDING DAMAGE TO EQUIPMENT, LOSS OF DATA OR LOSS OF
+SETTINGS. YOU USE IT ENTIRELY AT YOUR OWN RISK.
+
+-------------------------------------------------------------------------------
+This software is built with the Go programming language and uses third-party
+open-source components under their own licenses; it also bundles the LUNA
+AiBridge StarChart app. The optional AI connection downloads and runs
+cloudflared (Cloudflare, Inc., Apache License 2.0) on your request. Not
+affiliated with or endorsed by N.I.N.A., ASCOM, INDI, Anthropic or xAI. See
+THIRD_PARTY_LICENSES.md.
